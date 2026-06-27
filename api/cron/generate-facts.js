@@ -1,6 +1,6 @@
 import { getEditionDate } from '../../lib/editionDate.js'
 import { getEdition, saveEdition } from '../../lib/blobStore.js'
-import { generateDailyFacts } from '../../lib/gemini.js'
+import { generateDailyFacts } from '../../lib/generateFacts.js'
 
 function isAuthorized(req) {
   const secret = process.env.CRON_SECRET
