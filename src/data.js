@@ -1,62 +1,37 @@
 export const facts = [
   {
     id: 1,
-    title:
-      'Why Car Companies are Suddenly Ditching Touchscreens and Rushing to Bring Back Physical Buttons',
-    category: 'Tech',
+    title: 'The Real Reason Modern Cars Always Keep Their Front Lights On',
+    category: 'Automotive',
     story:
-      'After a decade of replacing dashboards with massive glass screens, major automakers are reversing course. Drivers complained about taking their eyes off the road just to adjust the AC, and safety bodies like Euro NCAP started penalizing cars without physical controls. Brands are now rushing to bring back tactile buttons and dials for essential functions to improve driver safety and ergonomics.',
-    source: {
-      label: 'The Verge',
-      url: 'https://www.theverge.com/2024/3/5/24091043/euro-ncap-safety-rating-europe-2026-touchscreen-buttons-dials',
-    },
+      "Daytime Running Lights (DRLs)—the faint, always-on LEDs on the front of modern vehicles—aren't engineered to help you see the road at all. Instead, they are designed entirely to help other drivers see you. Global safety studies revealed that even in bright, broad daylight, a car with its front lights illuminated is detected significantly faster by the human peripheral vision of oncoming traffic. By making vehicles instantly pop out against asphalt and background glare, this incredibly low-wattage design has permanently slashed head-on collision rates worldwide.",
   },
   {
     id: 2,
-    title:
-      'Why Olympic Athletes Secretly Bought and Imported Their Own Portable AC Units to the Paris Games',
-    category: 'Global',
+    title: 'The Life-Saving Geometry Behind a Motorcycle\'s Gear Shift',
+    category: 'Design',
     story:
-      "In an effort to make the Paris Olympics the greenest in history, organizers built an athlete village without traditional air conditioning, relying instead on an underground cooling system. Fearing peak summer heatwaves would ruin their sleep and performance, wealthier sports federations—including the US, UK, and Australia—bypassed the eco-friendly plan and secretly shipped hundreds of portable AC units for their athletes' rooms.",
-    source: {
-      label: 'NPR',
-      url: 'https://www.npr.org/2024/06/24/nx-s1-5017544/paris-olympics-air-conditioning-usa',
-    },
+      "If you've ever ridden a motorcycle, you know the gear pattern goes 1-N-2-3-4-5, sandwiching neutral awkwardly right between first and second gear. This isn't a design oversight; it's a vital safety feature for emergencies. When a rider needs to stop suddenly in traffic, they don't want to delicately guess where first gear is—they want to forcefully stomp the gear lever all the way down. By placing Neutral above first, a rider can slam the foot controls down as hard as they want, knowing the bike will reliably lock straight into first gear ready to move, rather than rolling dangerously into a dead neutral.",
   },
   {
     id: 3,
-    title:
-      'Why it Took Japan Until 2024 to Officially Eliminate the Mandatory Use of Floppy Disks in Government Offices',
-    category: 'Tech',
+    title: 'Why Your Car Might Only Have a Single White Reverse Light',
+    category: 'Engineering',
     story:
-      "Despite its reputation for futuristic tech, Japan's bureaucracy was legally bound to physical floppy disks for decades. Over 1,000 government regulations explicitly required businesses to submit official documents on these obsolete disks. It took a multi-year digital campaign spearheaded by the nation's Digital Minister to finally repeal all the legacy laws and transition the entire government infrastructure to secure cloud storage.",
-    source: {
-      label: 'BBC News',
-      url: 'https://www.bbc.com/news/articles/cx82407j1v3o',
-    },
+      "Walk behind many modern cars while they back up, and you might notice only one bright white reverse light turns on. While it looks like a broken bulb, it's actually a clever dual-purpose safety layout popular under international regulations. Car manufacturers are required to include a blindingly bright red rear fog light alongside their standard white reverse lights. To maintain a clean, symmetrical look on the trunk without cluttering it with plastic housings, designers place the white reverse light on one side and the red fog light on the exact opposite side. As a bonus, it prevents drivers behind you from mistaking your reversing car for a vehicle driving toward them with two white headlights.",
   },
   {
     id: 4,
-    title:
-      'Why Millions of People in South Korea Suddenly Became One to Two Years Younger Overnight',
-    category: 'Global',
+    title: "The Earth's Atmosphere Acts as a Cosmic Light Filter",
+    category: 'Science',
     story:
-      "South Korea traditionally used a unique aging system where a baby was considered one year old at birth, and everyone aged up together on New Year's Day. This meant a baby born on New Year's Eve turned two years old just a day later. To eliminate massive legal, administrative, and medical confusion in international dealings, the government officially abolished the law, instantly shaving a year or two off every citizen's official age.",
-    source: {
-      label: 'BBC News',
-      url: 'https://www.bbc.co.uk/news/world-asia-66028606',
-    },
+      "The sky isn't blue because it reflects the ocean; it's blue due to a physics phenomenon called Rayleigh scattering. Sunlight looks white to us, but it actually contains every color of the rainbow traveling in waves. When this light hits Earth's gas-heavy atmosphere, the longer, lazier wavelengths (like red and yellow) pass straight through to the ground uninterrupted. However, the shorter, choppier blue wavelengths violently crash into gas molecules and bounce around in every single direction, painting the air in a scattered blue hue before the light ever reaches your eyes.",
   },
   {
     id: 5,
-    title:
-      'Why an International Airline Started Asking Passengers to Step on a Scale Before Boarding Their Flight',
+    title: 'The Secret Psychology Behind a Grocery Store\'s Layout',
     category: 'Lifestyle',
     story:
-      'To ensure maximum safety and fuel efficiency, airlines have to estimate the exact total weight of an aircraft before takeoff, usually relying on outdated generic averages for humans. Air New Zealand initiated a temporary program asking thousands of international passengers to step on a digital scale at the gate. The data was kept entirely anonymous and hidden from gate agents, serving strictly to help the airline calculate more accurate fuel loads and reduce carbon emissions.',
-    source: {
-      label: 'BBC News',
-      url: 'https://www.bbc.co.uk/news/business-65765801',
-    },
+      "Essential items like milk, eggs, and fresh bread are almost universally placed at the absolute furthest back corners of a supermarket. This isn't a logistical accident; it's a highly calculated retail strategy designed to maximize \"dwell time.\" Because these are the most frequently purchased daily essentials, stores deliberately force you to walk through entire gauntlets of high-margin impulse buys—like chips, sodas, and seasonal displays—just to grab a basic carton of milk, significantly boosting the average checkout total.",
   },
 ]
