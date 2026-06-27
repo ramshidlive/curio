@@ -23,10 +23,34 @@ function getEditionDate(timezone = process.env.CURIO_TIMEZONE || 'UTC') {
 }
 
 async function main() {
-  const token = process.env.BLOB_READ_WRITE_TOKEN?.trim()
+  const rawToken = process.env.BLOB_READ_WRITE_TOKEN
+  const token = rawToken?.trim()
+
   if (!token) {
-    console.error('Missing BLOB_READ_WRITE_TOKEN in .env.local')
-    console.error('Run: vercel env pull .env.local')
+    const pulledButEmpty =
+      rawToken === '' ||
+      rawToken === '""' ||
+      (typeof rawToken === 'string' && rawToken.length === 0)
+
+    console.error('Missing BLOB_READ_WRITE_TOKEN.')
+    console.error('')
+    if (pulledButEmpty) {
+      console.error(
+        'vercel env pull left BLOB_READ_WRITE_TOKEN empty — linked Blob tokens are often not copied locally.',
+      )
+      console.error('')
+      console.error('Paste the token manually into .env.local:')
+      console.error('  Vercel → curio → Settings → Environment Variables')
+      console.error('  → BLOB_READ_WRITE_TOKEN → reveal → copy value')
+      console.error('')
+      console.error('Or from Storage → curio-blob → Quickstart → copy BLOB_READ_WRITE_TOKEN')
+      console.error('')
+    }
+    console.error('Easiest: seed on production (token already on the server):')
+    console.error('  curl -X POST https://curio-teal.vercel.app/api/cron/seed-edition \\')
+    console.error('    -H "Authorization: Bearer YOUR_CRON_SECRET"')
+    console.error('')
+    console.error('Get CRON_SECRET from the same Environment Variables page.')
     process.exit(1)
   }
 

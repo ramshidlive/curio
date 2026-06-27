@@ -1,5 +1,9 @@
 import { getEditionDate } from '../../lib/editionDate.js'
-import { getEdition, saveEdition } from '../../lib/blobStore.js'
+import {
+  getEdition,
+  getRecentEditionCategories,
+  saveEdition,
+} from '../../lib/blobStore.js'
 import { generateDailyFacts } from '../../lib/generateFacts.js'
 
 function isAuthorized(req) {
@@ -19,9 +23,10 @@ export default async function handler(req, res) {
 
   try {
     const editionDate = getEditionDate()
+    const force = req.query?.force === 'true' || req.body?.force === true
     const existing = await getEdition(editionDate)
 
-    if (existing) {
+    if (existing && !force) {
       return res.status(200).json({
         ok: true,
         skipped: true,
@@ -30,10 +35,15 @@ export default async function handler(req, res) {
       })
     }
 
-    const facts = await generateDailyFacts(editionDate)
+    const recentCategories = await getRecentEditionCategories(5)
+    const { facts, categories } = await generateDailyFacts(
+      editionDate,
+      recentCategories,
+    )
     const edition = {
       date: editionDate,
       createdAt: new Date().toISOString(),
+      categories,
       facts,
     }
 
@@ -44,6 +54,7 @@ export default async function handler(req, res) {
       skipped: false,
       date: editionDate,
       factsCount: facts.length,
+      categories,
       blobUrl: blob.url,
     })
   } catch (error) {
